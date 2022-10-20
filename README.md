@@ -19,3 +19,4 @@ The tech stack is a Python back end using Flask, with server rendered jinja page
 - After logging in display mainpage asking user to select who is the checkup for (different names and a new person selection)
 - After selecting, show the selected person`s profile (date of birth, gender) and previous results (these results can be deleted) and a start button to begin the symptom questionnaire. If a new person is selected, ask the user the new person's profile then begin the questionnaire. 
 - The result page shows the possible diseases and a button to save the result. 
+![symptom check](https://user-images.githubusercontent.com/99003181/196857095-3d18bb58-536c-4753-b21f-3c90fe93c772.png)
