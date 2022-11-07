@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <p> name: {{ member.name }}</p>
+    <p> gender: {{ member.gender }}</p>
+    <p> age: {{ member.age }}</p>
+</div>
+
+<div>
+    All the previous diagoneses for {{ member.name }}
+
+    {% for disease in diseases %} 
+        <li> {{ disease }} </li>  
+    {% endfor %}    
+
+</div>
+
+<p>
+    <a class="btn btn-primary" href="/members/{{ member.id }}/initialsymptoms">
+    Start the survey
+    </a>
+    <a class="btn btn-primary" href="/members/{{ member.id }}/edit">
+    Edit the member
+    </a>
+    <form>
+        <button class="btn btn-danger"
+                formmethod="POST"
+                formaction="/members/{{ member.id }}/delete">
+          Delete
+        </button>
+    </form>
+</p>
+
+{% endblock %} 
