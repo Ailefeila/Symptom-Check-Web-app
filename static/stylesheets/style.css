@@ -1,0 +1,211 @@
+/* ====================== General */
+
+body.error-404 {
+  background-color: #1da1f2;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.btn {
+  border-radius: 50px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/* ======================= Nav */
+
+.navbar {
+  background-color: #fff;
+  height: 46px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 9999;
+}
+
+.navbar a {
+  color: #66757f;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #1c94e0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+ul.nav.navbar-nav {
+  align-items: center;
+}
+
+ul.nav.navbar-nav li {
+  margin: 0 0.5rem;
+  display: flex;
+}
+
+
+/* on "onboarding" pages (signup & login), the navbar is
+   different: no search box, the logo is centered, and it has
+   a background color.
+ */
+
+.onboarding > .navbar {
+  background-color: #fff;
+  background-size: 100% 100%;
+}
+
+.onboarding .navbar-header {
+  margin: 0 auto;
+}
+
+.onboarding .navbar-brand {
+  margin: 0;
+}
+
+.onboarding .navbar-brand span {
+  display: none;
+}
+
+.onboarding .nav.navbar-nav.navbar-right {
+  position: absolute;
+  right: 16px;
+}
+
+.onboarding > .navbar a {
+  color: #66757f;
+}
+
+.onboarding > .navbar a:hover {
+  color: #1c94e0;
+}
+
+
+.onboarding > .navbar form.navbar-form {
+  display: none;
+}
+
+@media (max-width: 468px) {
+  nav form.navbar-form {
+    display: none;
+  }
+}
+
+nav + .container {
+  margin-bottom: 1rem;
+}
+
+
+/* ============================ Signed out home */
+
+.home-hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  z-index: -1;
+  background-image: url("/static/images/signed-out-home.jpg");
+  background-size: cover;
+  background-position: center center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1rem;
+  text-shadow: 0 0 8px #66757f;
+}
+
+
+.home-hero .btn {
+  text-shadow: none;
+  position: relative;
+  z-index: 1;
+  width: 150px;
+}
+
+.home-hero h1 {
+  margin-bottom: 4rem;
+}
+
+
+
+/* ========================== Signup/Login */
+
+.loginform {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  z-index: -1;
+  background-image: url("/static/images/signed-out-home.jpg");
+  background-size: cover;
+  background-position: center center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1rem;
+}
+
+.loginform h3 {
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.card {
+  margin-bottom: 2rem;
+  color:rgb(0, 0, 0)
+}
+
+.card-title {
+  color: rgb(72, 72, 198);
+}
+
+.memberdetailform {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  z-index: -1;
+  background-image: url("/static/images/signed-out-home.jpg");
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  font-size: 20px;
+}
+
+
+#MemberaddForm input.form-control {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px;
+}
+
+
+#user_form input.form-control {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px;
+}
+
+
+

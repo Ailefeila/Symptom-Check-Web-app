@@ -1,25 +1,18 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
-<form id="MemberaddForm" method="post">
+<div class="loginform">
+  <h3>Add a member</h3>  
+  <form id="MemberaddForm" method="post">
     {{ form.hidden_tag() }}
-
-    {% for field in form
-        if field.widget.input_type != 'hidden' %}
-
-        <p>
-            {{ field.label }}
-            {{ field }}
-        
-            {% for error in field.errors %}
-              {{ error }}
-            {% endfor %}
-        </p>
-
-    {% endfor %}  
-
-    <button type="submit">Submit</button>
-</form>
+    {% for field in form if field.widget.input_type != 'hidden' %}
+        {% for error in field.errors %}
+          <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+        {{ field(placeholder=field.label.text, class="form-control") }}
+    {% endfor %} 
+    <button class="btn btn-primary btn-block" type="submit">Submit</button>
+  </form>
+</div>
 
 {% endblock %}

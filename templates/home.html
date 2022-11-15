@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1> See all the members</h1>
-
-<ul>
-{% for member in members %} 
-  <li>
-    <a href="/members/{{ member.id }}">{{ member.name}}</a>
-  </li>
-{% endfor %}
-</ul>
-
-<p><a class="btn btn-primary" href="/members/add"> Add a member</a></p>
-
+<div class="loginform">
+  <h3> See all the members</h3>
+  {% for member in members %}
+  <div class="card" style="width: 18rem; height: 10rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ member.name}}</h5>
+      <p class="card-text"> This member is a {{ member.age }} years old {{ member.gender }}</p>
+      <a href="/members/{{ member.id }}">More details</a>
+    </div>
+  </div>
+  {% endfor %}
+  <p><a class="btn btn-primary" href="/members/add"> Add a member</a></p>
+</div>
 {% endblock %} 

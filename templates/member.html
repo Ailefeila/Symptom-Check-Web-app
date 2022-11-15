@@ -1,20 +1,18 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
-<div class="jumbotron">
+<div class="memberdetailform">
+<div>
     <p> name: {{ member.name }}</p>
     <p> gender: {{ member.gender }}</p>
     <p> age: {{ member.age }}</p>
 </div>
 
 <div>
-    All the previous diagoneses for {{ member.name }}
-
+    <p>The previous diagoneses for {{ member.name }}</p>
     {% for disease in diseases %} 
         <li> {{ disease }} </li>  
     {% endfor %}    
-
 </div>
 
 <p>
@@ -32,5 +30,7 @@
         </button>
     </form>
 </p>
+
+</div>
 
 {% endblock %} 

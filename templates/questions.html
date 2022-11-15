@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
+
+<div class="memberdetailform">
 <p> {{ question }}</p>
-<p> {{ answer }}</p>
+<p> （ {{ answer }} ）</p>
 
 <form method="post">
     {{ form.hidden_tag() }}
@@ -22,8 +23,8 @@
 
     {% endfor %}  
 
-    <button type="submit">Submit</button>
+    <button class="btn btn-primary" type="submit">Submit</button>
 </form>
-
+</div>
 
 {% endblock %} 
